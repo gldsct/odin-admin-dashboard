@@ -45,3 +45,249 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* End of CSS Resets */
+
+/* General (Layout) Styles */
+
+body {
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.grid-container {
+    background: goldenrod;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "sidebar header"
+    "sidebar main-content";
+}
+
+.header {
+    grid-area: header;
+    background-color: #E4CFBF;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: #A9C6B9;
+    color: #01080A;
+}
+
+.main-content {
+    grid-area: main-content;
+    background-color: #D7B782;
+}
+
+.profile-picture-large, .profile-picture-small {
+    box-shadow: 1px 1px 5px #7D5243;
+    border-radius: 50%;
+}
+
+/* End of General (Layout) Styles */
+
+/* Sidebar Styles */
+
+.sidebar {
+    display: grid;
+    row-gap: 48px;
+    align-items: start;
+    padding: 16px 24px 0px;
+    align-content: start;
+}
+
+.sidebar-navigation, .sidebar-support {
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.sidebar > div > div {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    font-size: 1.4rem;
+}
+
+.sidebar > div:nth-child(1) > div {
+    gap: 20px;
+}
+
+.sidebar-intro > div > p {
+    font-size: 1.7rem;
+}
+
+/* End of Sidebar Styles */
+
+/* Header Styles */
+
+.header {
+    padding: 24px 54px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "site-search user-info"
+    "user-welcome buttons";
+    align-items: center;
+    gap: 12px 120px;
+}
+
+.site-search {
+    grid-area: site-search;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.site-search > .search-icon {
+    font-size: 24px;
+}
+
+.site-search > input[type="search"] {
+    appearance: none;
+    line-height: 2;
+    padding: 0px 24px;
+    border: none;
+    border-radius: 16px;
+    background-color: #D7B782;
+    flex: 1 1 40vw;
+}
+
+.user-info {
+    grid-area: "user-info";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 42px;
+}
+
+.user-info-header {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.user-welcome {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    font-weight: bold;
+}
+
+.user-welcome-msg-username {
+    font-size: 1.5rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.buttons > button {
+    width: 7rem;
+    padding: 8px 0;
+    border: 1px solid black;
+    border-radius: 16px;
+    background-color: #A9C6B9;
+    color: #01080A;
+    font-weight: bold;
+}
+
+/* End of Header Styles */
+
+/* Main Content Styles */
+
+.main-content {
+    padding: 24px;
+    display: grid;
+    grid-template-columns: 2fr 350px;
+    grid-template-rows: auto 1fr;
+    gap: 12px 24px;
+    align-items: start;
+}
+
+.projects-content {
+    height: 100%;
+    grid-row: 2 / -1;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.project-card {
+    min-height: 250px;
+    background-color: #E4CFBF;
+    padding: 24px;
+    border-radius: 12px;
+    border-left: 12px solid #2C494B;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card-text > h3 {
+    font-size: 1.2rem;
+}
+
+.project-card-buttons {
+    align-self: flex-end;
+    display: flex;
+    gap: 24px;
+}
+
+/* Main Content - Magic Section Styles */
+
+.main-misc-content {
+    grid-column: 2 / 3;
+    grid-row: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.magic-content {
+    background-color: #E4CFBF;
+    padding: 32px 32px 0;
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.magic-card {
+    padding-bottom: 32px;
+    border-bottom: 2px solid #A06361;
+}
+
+.magic-card-header {
+    font-weight: bold;
+}
+
+.magic-content > div:nth-last-child(1) {
+    border-bottom: none;
+}
+
+/* Main Content - Friends Section Styles */
+
+.friends-content {
+    background-color: #E4CFBF;
+    padding: 32px;
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.friends-card {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.friends-card-text {
+    color: #333;
+}
+
+/* End of Main Content Styles */
